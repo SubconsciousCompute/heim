@@ -35,7 +35,7 @@ smol = "^1.2"
 
 [target.'cfg(target_os = "windows")'.dependencies]
 heim-host = { version = "0.1.0-rc.1", path = "../heim-host" }
-ntapi = "0.3.3"
+ntapi = "^0.4"
 
 [target.'cfg(target_os = "windows")'.dependencies.winapi]
 version = ">=0.3.8"
