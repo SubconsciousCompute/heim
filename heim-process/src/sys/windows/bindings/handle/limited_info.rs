@@ -6,13 +6,12 @@ use std::ffi::OsString;
 use std::io;
 use std::marker::PhantomData;
 use std::mem;
-use std::os::raw::c_void;
 use std::os::windows::ffi::OsStringExt;
 use std::path::PathBuf;
 use std::ptr;
 
 use ntapi::{ntpebteb, ntpsapi, ntrtl, ntwow64};
-use winapi::ctypes::wchar_t;
+use winapi::ctypes::{wchar_t, c_void};
 use winapi::shared::minwindef::{DWORD, FILETIME, MAX_PATH};
 use winapi::shared::{basetsd, ntstatus, winerror};
 use winapi::um::{memoryapi, processthreadsapi, psapi, winbase, winnt, wow64apiset};
