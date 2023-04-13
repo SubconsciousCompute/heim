@@ -8,6 +8,7 @@ use heim_common::Pid;
 use heim_runtime as rt;
 
 #[derive(Debug)]
+#[allow(dead_code)]
 pub struct IoCounters {
     interface: String,
     rx_bytes: Information,

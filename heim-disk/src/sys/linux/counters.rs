@@ -21,6 +21,7 @@ use heim_runtime as rt;
 const DISK_SECTOR_SIZE: u64 = 512;
 
 #[derive(Debug, Default)]
+#[allow(dead_code)]
 pub struct IoCounters {
     name: String,
     read_count: u64,
