@@ -13,13 +13,13 @@ heim = { path = "../heim", features = ["full"] }
 futures-timer = "^3.0"
 
 futures = "^0.3"
-smol = "^1.2"
+smol = "^1.3"
 tokio = { version = "^0.3", features = ["full"] }
-async-std = { version = "^1.7", features = ["attributes"] }
+async-std = { version = "^1.12", features = ["attributes"] }
 
 ptree = { version = "0.3", default-features = false, features = ["ansi"] }
 prettytable-rs = "0.8.0"
-humantime = "2.0.0"
+humantime = "2.1.0"
 
 [[example]]
 name = "disk_usage"

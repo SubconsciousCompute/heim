@@ -14,13 +14,13 @@ license = "Apache-2.0 OR MIT"
 heim-common = { version = "0.1.0-rc.1", path = "../heim-common" }
 heim-runtime = { version = "0.1.0-rc.1", path = "../heim-runtime" }
 cfg-if = "^1.0"
-bitflags = "1.0.4"
+bitflags = "1.3.2"
 
 [target.'cfg(unix)'.dependencies]
 libc = "^0.2"
 
 [target.'cfg(target_os = "windows")'.dependencies]
-widestring = "0.4.0"
+widestring = "0.4.3"
 
 [target.'cfg(target_os = "windows")'.dependencies.winapi]
 version = ">=0.3.8"
@@ -34,7 +34,7 @@ core-foundation = "^0.9"
 
 [dev-dependencies]
 heim-derive = { version = "0.1.0-rc.1", path = "../heim-derive" }
-smol = "^1.2"
+smol = "^1.3"
 futures = "^0.3"
 version-sync = "0.9"
 
