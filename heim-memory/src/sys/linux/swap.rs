@@ -35,7 +35,7 @@ impl FromStr for VmStat {
             match parts.next() {
                 Some(value) => {
                     *field = {
-                        let bytes = match value.trim_start().splitn(2, ' ').next() {
+                        let bytes = match value.trim_start().split(' ').next() {
                             Some(kbytes) => {
                                 // Values are expressed in 4 kilo bytes, we want bytes instead.
                                 // Source: psutil
@@ -109,7 +109,7 @@ impl Swap {
             match parts.next() {
                 Some(value) => {
                     *field = {
-                        let bytes = match value.trim_start().splitn(2, ' ').next() {
+                        let bytes = match value.trim_start().split(' ').next() {
                             Some(kbytes) => {
                                 let value = kbytes.parse::<u64>()?;
                                 Information::new::<information::kilobyte>(value)

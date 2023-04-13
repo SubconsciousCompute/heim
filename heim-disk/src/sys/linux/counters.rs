@@ -63,7 +63,7 @@ impl IoCounters {
         let path = CString::new(format!(
             "{}/block/{}",
             rt::linux::sysfs_root().display(),
-            self.name.replace("/", "!")
+            self.name.replace('/', "!")
         ))?;
 
         let result =

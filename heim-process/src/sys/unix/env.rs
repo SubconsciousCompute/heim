@@ -112,7 +112,7 @@ mod tests {
 
     #[test]
     fn test_iter() {
-        let mut env = Environment::from_bytes(&SUITE).into_iter();
+        let mut env = Environment::from_bytes(SUITE).into_iter();
 
         assert_eq!(
             Some((

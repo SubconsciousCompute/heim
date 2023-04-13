@@ -7,7 +7,7 @@ use heim_runtime as rt;
 pub async fn uptime() -> Result<Time> {
     let contents = rt::fs::read_to_string(rt::linux::procfs_root().join("uptime")).await?;
 
-    match contents.splitn(2, ' ').next() {
+    match contents.split(' ').next() {
         Some(raw_value) => {
             let seconds = raw_value.parse::<f64>()?;
 

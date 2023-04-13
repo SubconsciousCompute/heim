@@ -23,7 +23,7 @@ extern "C" {
 
 #[allow(trivial_numeric_casts)]
 pub fn errno() -> i32 {
-    unsafe { (*errno_location()) as i32 }
+    unsafe { *errno_location() }
 }
 
 /// Sets the platform-specific value of errno
