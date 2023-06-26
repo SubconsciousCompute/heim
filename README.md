@@ -1,3 +1,5 @@
+We maintain the `subcom` branch. The `master` branch sees minimal changes.
+
 # heim
 
 ![Project banner](./.github/readme-logo.png)
