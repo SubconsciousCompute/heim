@@ -1,4 +1,4 @@
-#![cfg(target_os = "linux")]
+#![cfg(any(target_os = "linux", target_os = "android"))]
 
 //! Linux-specific extension for configuring custom paths for Procfs
 /// and Sysfs.
