@@ -1,6 +1,7 @@
 use heim_common::units::{ratio::ratio, Ratio};
 use heim_common::{Error, Result};
 
+#[cfg(not(target_os = "android"))]
 pub async fn loadavg() -> Result<(Ratio, Ratio, Ratio)> {
     let mut data: [libc::c_double; 3] = [0.0, 0.0, 0.0];
     let result = unsafe { libc::getloadavg(data.as_mut_ptr(), 3) };
@@ -14,4 +15,9 @@ pub async fn loadavg() -> Result<(Ratio, Ratio, Ratio)> {
     } else {
         Err(Error::last_os_error().with_ffi("getloadavg"))
     }
+}
+
+#[cfg(target_os = "android")]
+pub async fn loadavg() -> Result<(Ratio, Ratio, Ratio)> {
+    Err(Error::with_message("getloadavg is not available on this platform."))
 }

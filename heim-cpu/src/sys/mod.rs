@@ -18,6 +18,9 @@ cfg_if::cfg_if! {
         pub use self::macos::*;
     } else if #[cfg(target_os = "android")] {
         // testing.
+        mod linux;
+
+        pub use self::linux::{logical_count, physical_count};
     } else {
         compile_error!("Unsupported target OS");
     }
